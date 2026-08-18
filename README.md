@@ -14,8 +14,14 @@
 
 ## 🚀 Live Demo
 
-- 🌐 **Customer Storefront**: [food-delivery-frontend.vercel.app](https://food-delivery-frontend.vercel.app)
-- ⚙️ **Backend API**: [food-delivery-backend.onrender.com](https://food-delivery-backend.onrender.com)
+### Render Deployment (Multi-Service)
+- 🛒 **Customer Storefront**: [https://food-delivery-frontend-s7vr.onrender.com/](https://food-delivery-frontend-s7vr.onrender.com/)
+- 🛡️ **Admin Dashboard**: [https://food-delivery-admin-qlk2.onrender.com/](https://food-delivery-admin-qlk2.onrender.com/)
+- ⚙️ **Backend API**: [https://food-delivery-backend-da29.onrender.com](https://food-delivery-backend-da29.onrender.com)
+
+### Vercel & Render Deployment
+- 🌐 **Customer Storefront (Vercel)**: [food-delivery-frontend.vercel.app](https://food-delivery-frontend.vercel.app)
+- ⚙️ **Backend API (Render)**: [food-delivery-backend.onrender.com](https://food-delivery-backend.onrender.com)
 
 ---
 
