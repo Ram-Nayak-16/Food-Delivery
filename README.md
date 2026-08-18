@@ -5,7 +5,6 @@
 [![Express.js](https://img.shields.io/badge/Express.js-4.x-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![Render](https://img.shields.io/badge/Render-Deployed-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://render.com/)
 
 **CrazyBite** is a feature-rich, full-stack food delivery application built using the MERN stack (MongoDB, Express, React, Node.js). It offers a seamless customer online food ordering experience paired with a robust administrative dashboard for menu management and real-time order tracking.
@@ -14,14 +13,9 @@
 
 ## 🚀 Live Demo
 
-### Render Deployment (Multi-Service)
 - 🛒 **Customer Storefront**: [https://food-delivery-frontend-s7vr.onrender.com/](https://food-delivery-frontend-s7vr.onrender.com/)
 - 🛡️ **Admin Dashboard**: [https://food-delivery-admin-qlk2.onrender.com/](https://food-delivery-admin-qlk2.onrender.com/)
-- ⚙️ **Backend API**: [https://food-delivery-backend-da29.onrender.com](https://food-delivery-backend-da29.onrender.com)
-
-### Vercel & Render Deployment
-- 🌐 **Customer Storefront (Vercel)**: [food-delivery-frontend.vercel.app](https://food-delivery-frontend.vercel.app)
-- ⚙️ **Backend API (Render)**: [food-delivery-backend.onrender.com](https://food-delivery-backend.onrender.com)
+- ⚙️ **Backend API**: [https://food-delivery-backend-n6h4.onrender.com](https://food-delivery-backend-n6h4.onrender.com)
 
 ---
 
@@ -53,7 +47,7 @@
 | **Admin Portal** | React 18, Vite, React Router DOM, React Toastify, Axios, CSS3 |
 | **Backend API** | Node.js, Express.js, Mongoose, JWT, Bcrypt, Multer, Stripe SDK |
 | **Database** | MongoDB / MongoMemoryServer |
-| **Hosting** | Vercel (Frontend Client), Render (Backend API) |
+| **Hosting** | Render (Backend, Frontend Client & Admin Portal) |
 
 ---
 
