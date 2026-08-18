@@ -74,7 +74,6 @@ Food-Delivery/
 │   ├── routes/          # Express route declarations
 │   ├── uploads/         # Static storage for uploaded product images
 │   └── package.json
-├── start-all.bat         # 1-click startup script for Windows local development
 └── README.md
 ```
 
@@ -120,13 +119,6 @@ STRIPE_SECRET_KEY=your_stripe_secret_key_here
 
 ### 4. Run the Application
 
-#### Option A: Using the Windows 1-Click Script
-On Windows, double-click `start-all.bat` or run:
-```cmd
-start-all.bat
-```
-
-#### Option B: Manual Terminal Launch
 Start each service in a separate terminal window:
 
 - **Backend API (Port 4000)**:
