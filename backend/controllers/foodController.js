@@ -14,7 +14,7 @@ const addFood = async (req, res) => {
     image: image_filename,
   });
   try {
-    let userData = await userModel.findById(req.body.userId);
+    let userData = await userModel.findById(req.body.userId || req.userId);
     if (userData && userData.role === "admin") {
       await food.save();
       res.json({ success: true, message: "Food Added" });
@@ -41,7 +41,7 @@ const listFood = async (req, res) => {
 // remove food item
 const removeFood = async (req, res) => {
   try {
-    let userData = await userModel.findById(req.body.userId);
+    let userData = await userModel.findById(req.body.userId || req.userId);
     if (userData && userData.role === "admin") {
       const food = await foodModel.findById(req.body.id);
       fs.unlink(`uploads/${food.image}`, () => {});

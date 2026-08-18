@@ -58,5 +58,23 @@ export const connectDB = async () => {
       } catch (error) {
         console.error("Seeding error:", error);
       }
+    })
+    .catch(async (err) => {
+      console.error("Failed to connect to primary MONGO_URL:", err.message);
+      console.log("Falling back to local in-memory database...");
+      try {
+        const mongoServer = await MongoMemoryServer.create();
+        const fallbackUrl = mongoServer.getUri();
+        await mongoose.connect(fallbackUrl);
+        console.log("DB Connected to in-memory database fallback");
+        const count = await foodModel.countDocuments();
+        if (count === 0) {
+          console.log("Database is empty. Seeding initial food items...");
+          await foodModel.insertMany(initialFoods);
+          console.log("Seeding completed successfully!");
+        }
+      } catch (fallbackErr) {
+        console.error("In-memory database connection error:", fallbackErr);
+      }
     });
 };
