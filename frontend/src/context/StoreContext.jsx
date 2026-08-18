@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { food_list as static_food_list } from "../assets/frontend_assets/assets";
 
 export const StoreContext = createContext(null);
 
@@ -8,7 +9,7 @@ const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
   const [token, setToken] = useState("");
-  const [food_list, setFoodList] = useState([]);
+  const [food_list, setFoodList] = useState(static_food_list);
 
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
@@ -60,11 +61,16 @@ const StoreContextProvider = (props) => {
   };
 
   const fetchFoodList = async () => {
-    const response = await axios.get(url + "/api/food/list");
-    if (response.data.success) {
-      setFoodList(response.data.data);
-    } else {
-      alert("Error! Products are not fetching..");
+    try {
+      const response = await axios.get(url + "/api/food/list");
+      if (response.data && response.data.success && response.data.data.length > 0) {
+        setFoodList(response.data.data);
+      } else {
+        setFoodList(static_food_list);
+      }
+    } catch (error) {
+      console.log("Backend offline or error fetching food list, using local assets fallback:", error);
+      setFoodList(static_food_list);
     }
   };
 

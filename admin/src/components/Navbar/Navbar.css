@@ -1,15 +1,26 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 4%;
+    padding: 16px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
 }
-.navbar .logo{
-    width: max(10%,80px);
+
+.navbar .logo {
+    width: 140px;
+    height: auto;
 }
-.navbar .profile{
+
+.navbar .profile {
     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ff4757;
+    padding: 2px;
 }
-.login-conditon{
+
+.login-conditon {
     font-size: 20px;
 }

@@ -1,10 +1,15 @@
 @echo off
-echo Committing and pushing Render deployment changes to GitHub...
+echo ========================================================
+echo   Pushing CrazyBite UI Enhancements to GitHub Repository
+echo ========================================================
+echo.
+
 git add .
-git commit -m "Configure Render Blueprint deployment"
-git push origin main
+git commit -m "Upgrade UI design system, glassmorphism components, and local scratch setup"
+git push -u origin main --force
+
 echo.
 echo ========================================================
-echo Push complete! Render will now detect the updated render.yaml
+echo SUCCESS! All UI enhancements pushed to GitHub!
 echo ========================================================
 pause
