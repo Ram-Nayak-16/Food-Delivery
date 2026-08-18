@@ -33,10 +33,8 @@ app.get("/", (req, res) => {
   res.send("API Working");
 });
 
-if (!process.env.VERCEL) {
-  app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Server Started on port: ${port}`);
-  });
-}
+});
 
 export default app;
