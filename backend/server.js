@@ -13,7 +13,11 @@ const port =process.env.PORT || 4000;
 
 //middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://food-delivery-frontend-eight-cyan.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true 
+}));
 
 // DB connection
 connectDB();
@@ -29,7 +33,7 @@ app.get("/", (req, res) => {
   res.send("API Working");
 });
 
-if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
+if (!process.env.VERCEL) {
   app.listen(port, () => {
     console.log(`Server Started on port: ${port}`);
   });
